@@ -26,10 +26,23 @@ public class Reader
                 String s = fileScanner.next();
                 try {
                     switch (s) {
+
+                        /*
+                        *This is the first part of the election. When the fileScanner comes across the letter E,
+                        * we know that this is the beginning of a new election. The next value will be 1 or 0 that
+                        * determines whether the user was elected or not respectively
+                        *
+                        * (For the purpose of this project, the next line involves the time of the election, but this
+                        * information was not necessary for us)
+                         */
                         case "E":
                             elected = new Integer(fileScanner.next());
                             break;
 
+                        /*
+                        *The next line after E is U which is the user that is up for election. After thr U, the next 2 lines
+                        * will be the user id and the username
+                         */
                         case "U":
                             id = new Integer(fileScanner.next());
                             if (!(set.containsKey(id))) {
@@ -41,6 +54,9 @@ public class Reader
                             set.get(id).electionResult(elected);
                             break;
 
+                        /*
+                        *After the user, the nominator (or nominators) will be listed
+                         */
                         case "N":
                             Integer nominatorId = new Integer(fileScanner.next());
                             if (nominatorId.intValue() == -1) {
@@ -55,6 +71,10 @@ public class Reader
                             }
                             break;
 
+                        /*
+                        * Finally, all of the users will cast their votes. This continues until the fileScanner comes across
+                        * the letter E again, signaling that the next election is beginning
+                         */
                         case "V":   
                             Integer vote = new Integer(fileScanner.next());
                             Integer voterId = new Integer(fileScanner.next());

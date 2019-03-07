@@ -20,7 +20,8 @@ public class User
         this.name = name;
         this.id = id;
     }
-    
+
+    //Stores whenever this user votes on another in an election
     public void addVote(Integer i) {
         int num = i.intValue();
         if (num == 1) {
@@ -31,7 +32,8 @@ public class User
             voteNeutral++;
         }
     }
-    
+
+    //Outputs the number of times that this user has voted in a nomination by showing how they voted
     public void totalVotes() {
         if (voteFor != 0 || voteAgainst != 0 || voteNeutral != 0) {
             System.out.println(voteFor + " votes for\n" +
@@ -41,7 +43,8 @@ public class User
             System.out.println(name + " has not voted yet.");
         }
     }
-    
+
+    //Stores votes when this user is put up for election
     public void recievedVote(Integer i) {
         int num = i.intValue();
         if (num == 1) {
@@ -52,7 +55,8 @@ public class User
             votedNeutral++;
         }
     }
-    
+
+    //Prints the total number of votes that his user has recieved in elections
     public void totalVotesRecieved() {
         if (votedFor != 0 || votedAgainst != 0 || votedNeutral != 0) {
             System.out.println(votedFor + " times voted for\n" +
@@ -70,7 +74,8 @@ public class User
     public void addNominator(User u) {
         nominators.add(u);
     }
-    
+
+    //Prints all of the users that have nominated this user for election
     public void getNominators() {
         if (nominators.size() == 0) {
             System.out.println("This user has not been nominated");
@@ -80,7 +85,8 @@ public class User
             }
         }
     }
-    
+
+    //Determines whether or not this user has been elected
     public void electionResult(Integer i) {
         if (i.intValue() == 1) {
             elected = true;

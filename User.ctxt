@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=User
+comment1.params=name\ id
+comment1.target=User(java.lang.String,\ java.lang.Integer)
+comment2.params=i
+comment2.target=void\ addVote(java.lang.Integer)
+comment3.params=
+comment3.target=void\ totalVotes()
+comment4.params=i
+comment4.target=void\ recievedVote(java.lang.Integer)
+comment5.params=
+comment5.target=void\ totalVotesRecieved()
+comment6.params=
+comment6.target=java.lang.String\ getName()
+comment7.params=u
+comment7.target=void\ addNominator(User)
+comment8.params=
+comment8.target=void\ getNominators()
+comment9.params=i
+comment9.target=void\ electionResult(java.lang.Integer)
+numComments=10

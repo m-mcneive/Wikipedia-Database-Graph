@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Reader
+comment1.params=
+comment1.target=void\ run()
+comment2.params=id
+comment2.target=void\ totalVotesById(java.lang.Integer)
+comment3.params=screenName
+comment3.target=void\ totalVotesByName(java.lang.String)
+comment4.params=id
+comment4.target=void\ nominatorsById(java.lang.Integer)
+comment5.params=screenName
+comment5.target=void\ votesRecievedByName(java.lang.String)
+numComments=6
